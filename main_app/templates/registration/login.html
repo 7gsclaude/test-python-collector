@@ -1,0 +1,16 @@
+{%extends "base.html"%} {%block content%}
+<h1>login</h1>
+
+<form action="" method:"POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input class='btn blue' type="submit" value="Log In">
+
+</form>
+{% comment %} 
+this is super finnicky  {% endcomment %}
+
+
+
+{%endblock%}
+

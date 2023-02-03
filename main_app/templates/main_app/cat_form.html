@@ -1,0 +1,26 @@
+{%extends 'base.html' %} {% block content %}
+
+<form action='' method="POST" autocomplete = 'OFF'>
+{% comment %} #actoin tells the from where to  {% endcomment %}
+
+{% csrf_token %}
+{% if object %}
+<h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+{% else %}
+<h1>Add Cat</h1>
+{% endif %}
+
+<table>
+    {% comment %} this is amodel form this iss  whats generatroed in the views .html 
+    the cat update uses teh saem model from as the cat create  {% endcomment %}
+    {{form.as_table}}
+</table> 
+
+<input type='submit' value='Submit!' class='btn'>
+</form>
+
+
+
+
+
+{% endblock %}

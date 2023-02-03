@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{% block content %}
+
+{%endblock%}
+
+<h1>Delete Toy</h1>
+
+<div class='card'>
+    <div class="card-content"> 
+        <span class = "card-title"> A <span class="{{object.color.lower}}-text"> {{object.color.Capitolize}} </span> {{object.name}} </span>
+    </div> 
+
+
+<div class='card-action'> 
+    <a href='{% url "toy_update" object.id %}'> Edit </a>
+
+    <a href='{% url "toy_update" object.id %}'> Delete </a>
+</div>
+</div> 
